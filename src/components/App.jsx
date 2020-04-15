@@ -52,8 +52,6 @@ export default class App extends React.Component {
     fetch(`${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=${this.state.sort_by}&page=${this.state.page}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data.results);
-        console.log(data.total_pages);
         this.setState({
           movies: data.results,
           total_pages: data.total_pages
@@ -81,9 +79,6 @@ export default class App extends React.Component {
       updateMoviesWillWatch.splice(updateMoviesWillWatch.indexOf(movie.id), 1);
       updateMoviesListWillWatch.splice(updateMoviesListWillWatch.indexOf(movie.title), 1);
     }
-
-    console.log(this.state.moviesWillWatch);
-    console.log(this.state.moviesListWillWatch);
 
     this.setState({
       moviesWillWatch: updateMoviesWillWatch,
@@ -116,7 +111,7 @@ export default class App extends React.Component {
 
   render() {
     // console.log('render');
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className="container">
         <div className="row">

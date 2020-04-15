@@ -15,17 +15,7 @@ const Pagination = (props) => {
           </span>
         </li>
         <li className="page-item">
-          <span className="btn btn-light">Current page: {currentPage}</span>
-        </li>
-        <li className="page-item d-none d-sm-block">
-          <span className="page-link">
-            ...
-          </span>
-        </li>
-        <li className="page-item d-none d-sm-block">
-          <span className="page-link">
-          Total pages: {totalPages}
-          </span>
+          <span className="btn btn-light">{currentPage} of {totalPages}</span>
         </li>
         <li 
           className="page-item"
