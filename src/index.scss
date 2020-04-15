@@ -1,0 +1,29 @@
+#root {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.app-title,
+.aside-title,
+.card-title {
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.card-img-top {
+  height: 140px;
+  object-fit: cover;
+}
+
+.movies-list {
+  position: sticky;
+  top: 30px;
+}
