@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/reactwarriors-master-class/static/js/runtime~main.199926b5.js"
   },
   {
-    "revision": "c3c4c6197d61ac334ad2",
-    "url": "/reactwarriors-master-class/static/js/main.26d0e876.chunk.js"
+    "revision": "58fe59f5c8574a6ac1e3",
+    "url": "/reactwarriors-master-class/static/js/main.cb3dbc14.chunk.js"
   },
   {
     "revision": "4dd1e7de9820b0f2cb3c",
     "url": "/reactwarriors-master-class/static/js/2.46fa7967.chunk.js"
   },
   {
-    "revision": "c3c4c6197d61ac334ad2",
+    "revision": "58fe59f5c8574a6ac1e3",
     "url": "/reactwarriors-master-class/static/css/main.396f8bfd.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/reactwarriors-master-class/static/css/2.f2d17a84.chunk.css"
   },
   {
-    "revision": "8e062dd15f34df086038b9606f248c5b",
+    "revision": "061130b2250993bd18d5a857243a3500",
     "url": "/reactwarriors-master-class/index.html"
   }
 ];
