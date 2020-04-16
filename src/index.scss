@@ -19,11 +19,27 @@
 }
 
 .card-img-top {
-  height: 140px;
+  height: 30%;
   object-fit: cover;
+
+  @media screen and (min-width: 768px) {
+    height: 140px;
+  }
 }
 
 .movies-list {
   position: sticky;
   top: 30px;
+
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .movie-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

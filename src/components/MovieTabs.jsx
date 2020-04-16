@@ -16,7 +16,7 @@ const MovieTabs = (props) => {
   }
 
   return (
-    <ul className="nav nav-pills">
+    <ul className="nav nav-pills flex-column flex-sm-row">
       <li className="nav-item">
         <span 
           className={getClassLink("popularity.desc")}

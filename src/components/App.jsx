@@ -115,7 +115,7 @@ export default class App extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <h1 className="col-12 mb-4 text-justify app-title h3">Movie app</h1>
+          <h1 className="col-12 mb-4 text-center text-md-left app-title h3">Movies app</h1>
           <div className="col-12 col-md-9">
             <div className="row mb-3">
               <div className="col-12">
@@ -128,7 +128,7 @@ export default class App extends React.Component {
             <div className="row">
               {this.state.movies.map((movie) => {
                 return (
-                  <div className="col col-md-6 col-xl-4 mb-4" key={movie.id}>
+                  <div className="col-12 col-md-6 col-xl-4 mb-4" key={movie.id}>
                     <MovieItem 
                       movie={movie}
                       removeMovie={this.removeFilm}

@@ -49,7 +49,7 @@ export default class MovieItem extends React.Component {
                 toggleWillWatch(movie);
               }}
             >
-              {this.state.activeWillWatchBtn ? 'Remove Watch' : 'Will Watch'}
+              {this.state.activeWillWatchBtn ? 'Not Watch' : 'Will Watch'}
             </button>
           </div>
         </div>
