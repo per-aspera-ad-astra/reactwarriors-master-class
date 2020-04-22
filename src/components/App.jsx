@@ -13,6 +13,7 @@ export default class App extends React.Component {
       movies: [],
       moviesWillWatch: [],
       moviesListWillWatch: [],
+
       sort_by: "popularity.desc",
       page: 1,
       total_pages: 0
@@ -86,6 +87,21 @@ export default class App extends React.Component {
     });
   };
 
+  removeWillWatch = (movie, e) => {
+    const updateMoviesWillWatch = this.state.moviesWillWatch,
+          updateMoviesListWillWatch = this.state.moviesListWillWatch;
+
+    if(e.target.classList.contains('remove-movie-will-watch')) {
+      updateMoviesWillWatch.splice(updateMoviesWillWatch.indexOf(movie), 1);
+      updateMoviesListWillWatch.splice(updateMoviesListWillWatch.indexOf(movie), 1);
+    }
+
+    this.setState({
+      moviesWillWatch: updateMoviesWillWatch,
+      moviesListWillWatch: updateMoviesListWillWatch
+    });
+  }
+
   updateSortBy = (value) => {
     this.setState({
       sort_by: value
@@ -133,6 +149,7 @@ export default class App extends React.Component {
                       movie={movie}
                       removeMovie={this.removeFilm}
                       toggleWillWatch={this.toggleWillWatch}
+                      moviesWillWatch={this.state.moviesListWillWatch}
                     />
                   </div>
                 )
@@ -151,6 +168,7 @@ export default class App extends React.Component {
           </div>
           <MovieListWillWatch 
             moviesList={this.state.moviesListWillWatch}
+            removeWillWatch={this.removeWillWatch}
           />
         </div>
       </div>

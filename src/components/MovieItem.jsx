@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default class MovieItem extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
-      activeWillWatchBtn: false
+      moviesWillWatch: this.props.moviesWillWatch
     }
   }
 
@@ -41,7 +41,7 @@ export default class MovieItem extends React.Component {
             </button>
             <button 
               type="button"
-              className={this.state.activeWillWatchBtn ? removeWatchClass : willWatchClass}
+              className={(this.state.moviesWillWatch.indexOf(movie.title) !== -1) ? removeWatchClass : willWatchClass}
               onClick={() => {
                 this.setState({
                   activeWillWatchBtn: !this.state.activeWillWatchBtn
@@ -49,7 +49,7 @@ export default class MovieItem extends React.Component {
                 toggleWillWatch(movie);
               }}
             >
-              {this.state.activeWillWatchBtn ? 'Not Watch' : 'Will Watch'}
+              {(this.state.moviesWillWatch.indexOf(movie.title) !== -1) ? 'Not Watch' : 'Will Watch'}
             </button>
           </div>
         </div>

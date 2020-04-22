@@ -8,8 +8,13 @@ const MoviesListWillWatch = (props) => {
       <ul className="list-group">
         {props.moviesList.map((movie) => {
           return (
-            <li className="list-group-item" key={movie}>
+            <li 
+              className="list-group-item"
+              onClick={(e) => props.removeWillWatch(movie, e)}
+              key={movie}
+            >
               <span className="movie-title" title={movie}>{movie}</span>
+              <span className="remove-movie-will-watch">&times;</span>
             </li>
           )
         })} 
